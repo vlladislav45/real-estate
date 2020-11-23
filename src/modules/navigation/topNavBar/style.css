@@ -1,0 +1,97 @@
+a { text-decoration: none;
+    color: whitesmoke;
+}
+li { list-style: none; }
+
+.top-nav {
+    /* Center the image */
+    /* Do not repeat the image */
+    background: url(../../../assets/bg/hero1.jpg) no-repeat center;
+    background-size: cover;
+    height: 540px;
+    font-family: Obrazec;
+}
+
+.top-sticky-nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.top-sticky-nav nav {
+    display: flex;
+    width: 93%;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+.top-sticky-nav nav ul {
+    display: flex;
+    margin-left: auto;
+}
+
+@media (max-width: 950px) {
+    .top-sticky-nav nav {
+        display: block;
+    }
+
+    .top-sticky-nav nav ul {
+        margin-right: auto;
+        text-align: left;
+    }
+
+    .logo {
+        margin: auto !important;
+    }
+
+    .nav-btn {
+        padding: 2px !important;
+    }
+
+    .nav-btn + .nav-btn {
+        margin-left: 2px !important;
+    }
+
+    .nav-btn a {
+        margin: 0 !important;
+    }
+}
+
+.logo {
+    margin: auto 10%;
+    background: url(../../../assets/logo/real-estate.png) no-repeat;
+    background-size: contain;
+    width: 207px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/*Navigation buttons*/
+.top-sticky-nav nav .nav-btn {
+    padding: 29px;
+    font-size: 22pt;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    transition-property: transform;
+}
+
+.top-sticky-nav nav .nav-btn:hover {
+    background-color: #ccbf0a;
+    transform: rotate(-5deg)  scale(1.1);
+    -webkit-transform: rotate(-5deg)  scale(1.1);
+}
+
+.nav-btn + .nav-btn {
+    margin-left: 5px;
+}
+
+/*SEARCH BAR*/
+@media (max-width: 750px) {
+    .container {
+        display: none !important;
+    }
+}
