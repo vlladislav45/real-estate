@@ -3,6 +3,12 @@ a { text-decoration: none;
 }
 li { list-style: none; }
 
+.shell {
+    margin: auto;
+    max-width: 1600px;
+    height: auto;
+}
+
 .top-nav {
     /* Center the image */
     /* Do not repeat the image */
@@ -72,8 +78,8 @@ li { list-style: none; }
 
 /*Navigation buttons*/
 .top-sticky-nav nav .nav-btn {
-    padding: 29px;
-    font-size: 22pt;
+    padding: 18px;
+    font-size: 20pt;
     cursor: pointer;
     transition-duration: 0.4s;
     transition-property: transform;
