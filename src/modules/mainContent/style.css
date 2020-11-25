@@ -1,4 +1,14 @@
 /*Main Page*/
+.main-content {
+
+}
+
+.shell {
+    margin: auto;
+    max-width: 1600px;
+    height: auto;
+}
+
 .main-title {
     margin: 5%;
     text-align: center;
@@ -6,20 +16,27 @@
 
 .main-title > h2 {
     color: #323232;
+    font-size: 26pt;
 }
 
 .main-title > p {
     color: #7d7d7d;
+    font-size: 15pt;
 }
 
 /*Estate cards*/
 .cards {
-    margin-top: 5%;
+    /*padding: 0 20px;*/
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 50px;
-    padding: 0 10% 0 10%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    /*padding: 0 10% 0 10%;*/
 }
 
 @media (max-width: 950px) {
@@ -29,6 +46,7 @@
 
     .makeStyles-root-8 {
         max-width: none !important;
+        width: 75%;
     }
 }
 
@@ -70,13 +88,6 @@ header section .logo {
 header section a {
     float: right;
     padding: 3px 0;
-}
-
-.wrapper {
-    max-width: 1335px;
-    box-sizing: border-box;
-    padding: 0 20px;
-    margin: auto;
 }
 
 .wrapper a {
@@ -281,8 +292,12 @@ header section a {
     margin-bottom: 10px;
 }
 
-.support .businessman {
-    float: right;
+.support .businessman-container {
+    padding-top: 6%;
+    float: left;
+}
+
+.support .businessman-container .businessman {
     background: url(../../assets/bg/editor.jpg) no-repeat;
     background-size: contain;
     width: 493px;
@@ -296,9 +311,26 @@ header section a {
         width: 50%;
     }
 
-    .support .businessman {
-        margin: 20px auto 0;
+    .support .businessman-container {
+        margin-top: 20px;
         float: none;
+    }
+
+    .support .businessman-container .businessman {
+        margin: auto;
         width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .support .main-title {
+        margin: auto;
+        float: none;
+        width: 50%;
+    }
+
+    .support .businessman-container .businessman {
+        margin: auto;
+        width: 200px;
     }
 }
