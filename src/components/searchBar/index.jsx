@@ -29,46 +29,48 @@ const SearchBar = React.forwardRef((props,ref) => {
 
     return (
         <div ref={ref} className='container'>
-            <FormControl style={{width:1000}} variant="outlined" className={classes.formControl}>
-                <TextField
-                    id="outlined-search"
-                    label="Enter property, location, landmark..."
-                    type="search"
-                    variant="outlined" />
-            </FormControl>
+            <div className='shell'>
+                <FormControl style={{width:500}} variant="outlined" className={classes.formControl}>
+                    <TextField
+                        id="outlined-search"
+                        label="Enter property, location, landmark..."
+                        type="search"
+                        variant="outlined" />
+                </FormControl>
 
-            <FormControl style={{width:250}} variant="outlined" className={classes.formControl}>
-                <InputLabel id="demo-simple-select-outlined-label">Select City</InputLabel>
-                <Select
-                    labelId="demo-simple-select-outlined-label"
-                    id="demo-simple-select-outlined"
-                    // value={age}
-                    // onChange={handleChange}
-                    label="Select City"
+                <FormControl style={{width:250}} variant="outlined" className={classes.formControl}>
+                    <InputLabel id="demo-simple-select-outlined-label">Select City</InputLabel>
+                    <Select
+                        labelId="demo-simple-select-outlined-label"
+                        id="demo-simple-select-outlined"
+                        // value={age}
+                        // onChange={handleChange}
+                        label="Select City"
+                    >
+                        <MenuItem value="">
+                            <em>None</em>
+                        </MenuItem>
+                        <MenuItem value={'Varna'}>Varna</MenuItem>
+                        <MenuItem value={'Dobrich'}>Dobrich</MenuItem>
+                        <MenuItem value={'Veliko Tarnovo'}>Veliko Tarnovo</MenuItem>
+                        <MenuItem value={'Sofia'}>Sofia</MenuItem>
+                        <MenuItem value={'Sv. Vlast'}>Sv. Vlast</MenuItem>
+                        <MenuItem value={'Sunny Beach'}>Sunny Beach</MenuItem>
+                        <MenuItem value={'Plovdiv'}>Plovdiv</MenuItem>
+                    </Select>
+                </FormControl>
+
+                <Button
+                    style={{width:250}}
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    className={classes.button}
+                    startIcon={<SearchIcon />}
                 >
-                    <MenuItem value="">
-                        <em>None</em>
-                    </MenuItem>
-                    <MenuItem value={'Varna'}>Varna</MenuItem>
-                    <MenuItem value={'Dobrich'}>Dobrich</MenuItem>
-                    <MenuItem value={'Veliko Tarnovo'}>Veliko Tarnovo</MenuItem>
-                    <MenuItem value={'Sofia'}>Sofia</MenuItem>
-                    <MenuItem value={'Sv. Vlast'}>Sv. Vlast</MenuItem>
-                    <MenuItem value={'Sunny Beach'}>Sunny Beach</MenuItem>
-                    <MenuItem value={'Plovdiv'}>Plovdiv</MenuItem>
-                </Select>
-            </FormControl>
-
-            <Button
-                style={{width:250}}
-                variant="contained"
-                color="primary"
-                size="large"
-                className={classes.button}
-                startIcon={<SearchIcon />}
-            >
-                Search
-            </Button>
+                    Search
+                </Button>
+            </div>
         </div>
     );
 });

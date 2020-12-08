@@ -1,37 +1,37 @@
-import React, {useEffect, useRef} from 'react';
-import SearchBar from '../../../components/searchBar/index';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import './style.css';
 
-const TopNavBar = React.forwardRef((props, ref) => {
-    const searchBar = useRef(null);
-
+const TopNavBar = () => {
     useEffect(() => {
         let lastScrollTop = 0;
-        window.addEventListener('scroll', () => {
-            let stickyNavBar = document.getElementsByClassName('top-sticky-nav')[0];
-            let scrollTop = window.pageYOffset;
+        let stickyNavBar = document.getElementsByClassName('top-sticky-nav')[0];
 
-            //If scroll top
-            if(scrollTop < lastScrollTop) { //Scrolling to up
-                stickyNavBar.style.position = 'fixed';
-                stickyNavBar.style.zIndex = 1;
-            }else{ //Scrolling to down
-                stickyNavBar.style.position = 'relative';
-                stickyNavBar.style.top = 0;
-                searchBar.current.style.display = 'none'; // Hide search bar
-            }
+        console.log(stickyNavBar)
+        if(stickyNavBar !== undefined && stickyNavBar !== null) {
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset;
 
-            //If the user scrolling to top and the offsetY is less than 100y display the search bar
-            if(scrollTop < lastScrollTop && scrollTop <= 100) {
-                stickyNavBar.style.position = 'relative';
-                stickyNavBar.style.top = 0;
-                searchBar.current.style.display = 'flex';
-            }
+                //If scroll top
+                if (scrollTop < lastScrollTop) { //Scrolling to up
+                    stickyNavBar.style.position = 'fixed';
+                    stickyNavBar.style.zIndex = 1;
+                } else { //Scrolling to down
+                    stickyNavBar.style.position = 'relative';
+                    stickyNavBar.style.top = 0;
+                }
 
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-        });
-    })
+                //If the user scrolling to top and the offsetY is less than 100y display the search bar
+                if (scrollTop < lastScrollTop && scrollTop <= 100) {
+                    stickyNavBar.style.position = 'relative';
+                    stickyNavBar.style.top = 0;
+                }
+
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            });
+        }
+    });
 
     return(
         <div className='wrapper'>
@@ -39,23 +39,37 @@ const TopNavBar = React.forwardRef((props, ref) => {
                 <div className='top-nav'>
                     <div className='top-sticky-nav'>
                         <nav>
-                            <div className='logo'><a href='#'></a></div>
+                            <Link to={'/'} className='logo-container'>
+                                <div className='logo'></div>
+                            </Link>
 
                             <ul>
-                                <li className='nav-btn'><a href='#'>Home</a></li>
+                                <Link to={'/'}>
+                                    <li className='nav-btn'>
+                                        Home
+                                    </li>
+                                </Link>
 
-                                <li className='nav-btn'><a href='#'>About us</a></li>
+                                <Link to={'/about-us'}>
+                                    <li className='nav-btn'>
+                                        About us
+                                    </li>
+                                </Link>
 
-                                <li className='nav-btn'><a href='#'>Contact</a></li>
+                                <Link to={'/contact'}>
+                                    <li className='nav-btn'>
+                                        Contact
+                                    </li>
+                                </Link>
                             </ul>
                         </nav>
                     </div>
 
-                    <SearchBar ref={searchBar} />
+
                 </div>
             </div>
         </div>
     );
-});
+};
 
 export default TopNavBar;

@@ -1,0 +1,65 @@
+.shell {
+    margin: auto;
+    max-width: 1600px;
+    height: auto;
+}
+
+.main-contact-container {
+    display: flex;
+    justify-content: end;
+    padding: 2% 5% 0 5%;
+    color: #7d7d7d;
+}
+
+.main-contact-container h2 {
+    color: #7d7d7d;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #7d7d7d;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.main-contact-container .about-us-section {
+    width: 45%;
+    padding: 2%;
+}
+
+.main-contact-container .about-us-section p {
+    width: 49%;
+}
+
+.main-contact-container .about-us-section .hours-days {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.main-contact-container .contact-us-section {
+    margin-top: 1%;
+}
+
+#phone {
+    margin-top: 15%;
+}
+
+.contacts { margin-top: 2%; }
+
+@media (max-width: 950px) {
+
+    .main-contact-container {
+        display: block;
+    }
+
+    .main-contact-container .about-us-section {
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width: 750px) {
+    .makeStyles-formControl-1 {
+        width: 250px !important;
+    }
+}

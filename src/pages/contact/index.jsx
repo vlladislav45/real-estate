@@ -1,16 +1,16 @@
 import React from 'react';
 import TopNavBar from "../../modules/navigation/topNavBar";
-import MainContent from "../../modules/mainContent";
 import Footer from "../../modules/footer";
+import ContactMain from "../../modules/contactMain";
 import ArrowCircleUp from "../../components/arrowCircleUp";
 
-const MainPage = () => {
+const Contact = () => {
 
     return (
-        <div className='main-page'>
+        <div className='contact-container'>
             <TopNavBar />
 
-            <MainContent />
+            <ContactMain />
 
             <ArrowCircleUp />
 
@@ -19,4 +19,4 @@ const MainPage = () => {
     );
 }
 
-export default MainPage;
+export default Contact;

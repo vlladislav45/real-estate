@@ -50,8 +50,8 @@ li { list-style: none; }
         text-align: left;
     }
 
-    .logo {
-        margin: auto !important;
+    .logo-container {
+        margin: 0 !important;
     }
 
     .nav-btn {
@@ -67,8 +67,11 @@ li { list-style: none; }
     }
 }
 
+.logo-container {
+    margin: auto 10% !important;
+}
+
 .logo {
-    margin: auto 10%;
     background: url(../../../assets/logo/real-estate.png) no-repeat;
     background-size: contain;
     width: 207px;
@@ -93,11 +96,4 @@ li { list-style: none; }
 
 .nav-btn + .nav-btn {
     margin-left: 5px;
-}
-
-/*SEARCH BAR*/
-@media (max-width: 750px) {
-    .container {
-        display: none !important;
-    }
 }

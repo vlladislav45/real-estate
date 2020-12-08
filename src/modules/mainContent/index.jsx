@@ -14,6 +14,7 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import Button from '@material-ui/core/Button';
+import SearchBar from "../../components/searchBar";
 
 import feature2 from '../../assets/bg/feature2.jpg';
 import feature3 from '../../assets/bg/feature3.jpg';
@@ -72,6 +73,8 @@ const MainContent = () => {
     return (
       <div className='main-content'>
           <div className='shell'>
+              <SearchBar />
+
               <div className='main-title'>
                   <h2>Featured Properties</h2>
                   <p>You can contact us at any time
