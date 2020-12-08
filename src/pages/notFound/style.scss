@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Roboto:wght@500&display=swap");
+
+$lime: #c5dc50;
+$rasp: #f36a6f;
+$seed: #383838;
+$sm: 1rem;
+$md: 2.5rem;
+$lg: 4rem;
+
+.not-found-container {
+    background: linear-gradient(to right, white 50%, $seed 50%);
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: white;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-edge.png"),
+    auto;
+}
+
+.not-found-container div {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    max-width: 1000px;
+    width: calc(100% - #{$lg});
+    margin: 0 auto;
+> * {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-width: 500px;
+    width: 100%;
+    padding: $md;
+}
+}
+
+.not-found-container aside {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/right-edges.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 25px 100%;
+}
+
+.not-found-container aside img {
+    margin: auto;
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .not-found-container {
+        background: $seed;
+        font-size: 16px;
+    }
+    .not-found-container div {
+        flex-flow: column;
+    > * {
+        max-width: 700px;
+        height: 100%;
+    }
+}
+aside {
+    background-image: none;
+    background-color: white;
+img {
+    max-width: 300px;
+}
+}
+}

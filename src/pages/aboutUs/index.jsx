@@ -1,22 +1,22 @@
 import React from 'react';
 import TopNavBar from "../../modules/navigation/topNavBar";
-import MainContent from "../../modules/mainContent";
 import Footer from "../../modules/footer";
+import AboutUsMain from "../../modules/aboutUsMain";
 import ArrowCircleUp from "../../components/arrowCircleUp";
 
-const MainPage = () => {
+const AboutUs = () => {
 
-    return (
-        <div className='main-page'>
+    return(
+        <div className='about-us-container'>
             <TopNavBar />
 
-            <MainContent />
+            <AboutUsMain />
 
             <ArrowCircleUp />
 
             <Footer />
         </div>
     );
-}
+};
 
-export default MainPage;
+export default AboutUs;
